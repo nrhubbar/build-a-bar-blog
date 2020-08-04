@@ -1,0 +1,6 @@
+s3_id: <%= ENV['S3_ACCESS_KEY_ID'] %>
+s3_secret: <%= ENV['S3_SECRET_KEY'] %>
+s3_bucket: <%= ENV['S3_BUCKET_NAME'] %>
+s3_key_prefix: <%= ENV['S3_KEY_PREFIX'] %>
+cloudfront_distribution_id: <%= ENV['CLOUDFRONT_DISTRIBUTION_ID'] %>
+s3_endpoint: <%= ENV['S3_ENDPOINT'] %>
