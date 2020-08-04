@@ -1,7 +1,18 @@
 language: ruby
 rvm:
   - 2.5.1
-install: gem install jekyll -v 4.1.1 && gem install s3_website bundler
+install: gem install jekyll -v 4.1.1 && gem install bundler
 before_script: bundle install
 script: jekyll build
-after_success: s3_website push
+deploy:
+  on:
+    branch: master
+  provider: s3
+  bucket: $S3_BUCKET_NAME 
+  access_key_id: $S3_ACCESS_KEY_ID
+  secret_access_key: $S3_SECRET_KEY
+  region: $S3_ENDPOINT
+  acl: public_read
+  skip_cleanup: true
+  local_dir: ./_site
+  upload-dir: $S3_KEY_PREFIX
