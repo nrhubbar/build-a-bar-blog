@@ -3,7 +3,7 @@ rvm:
   - 2.5.1
 install: gem install jekyll -v 4.1.1 && gem install bundler
 before_script: bundle install
-script: jekyll build
+script: sh ./_scripts/build.sh -b $S3_KEY_PREFIX
 deploy:
   on:
     branch: master
