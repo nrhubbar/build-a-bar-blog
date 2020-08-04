@@ -22,7 +22,7 @@ url: 'https://bar.nicholas-hubbard.com/blog'
 
 author: Nicholas Hubbard                  # change to your full name
 
-avatar: /assets/img/the-authors.jpg # support internet resources
+avatar: /blog/assets/img/the-authors.jpg # support internet resources
 
 github:
   username: nrhubbar             # change to your github username
@@ -95,12 +95,12 @@ kramdown:
 
 # DO NOT change this unless you're a Pro user on Jekyll and Web development,
 # or you think you're smart enough to change other relevant URLs within this template.
-permalink: /posts/:title/
+permalink: /blog/posts/:title/
 
 defaults:
   -
     scope:
-      path: ""          # An empty string here means all files in the project
+      path: "blog"          # An empty string here means all files in the project
       type: posts
     values:
       layout: post
